@@ -17,5 +17,6 @@
         @include('components.header')
         @include('components.carousel')
         @include('components.products-container')
+        @include('components.footer')
     </body>
 </html>
