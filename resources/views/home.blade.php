@@ -15,5 +15,6 @@
     </head>
     <body class="antialiased min-w-full min-h-screen text-gray-900 bg-center bg-gray-100 selection:bg-red-500 selection:text-white">
         @include('components.header')
+        @include('components.carousel')
     </body>
 </html>
