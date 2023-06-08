@@ -7,8 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @include('components.product.form')
-            @include('components.product.table')
+            @include('components.product.edit-form')
         </div>
     </div>
 </x-app-layout>

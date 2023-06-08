@@ -16,6 +16,9 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     @if(Auth::user()->role == 'agent')
+                        <x-nav-link :href="route('products')">
+                            {{ __('Products') }}
+                        </x-nav-link>
                         <x-nav-link :href="route('category')">
                             {{ __('Categories') }}
                         </x-nav-link>

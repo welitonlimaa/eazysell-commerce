@@ -17,12 +17,12 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::create($request->all());
-        return redirect()->route('agent.category');
+        return redirect()->route('category');
     }
 
     public function destroy($id)
     {
         Category::where('id',$id)->delete();
-        return redirect()->route('agent.category');
+        return redirect()->route('category');
     }
 }

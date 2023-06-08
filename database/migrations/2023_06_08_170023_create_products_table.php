@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->text('url_img');
             $table->decimal('price', 8, 2);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
             $table->timestamps();

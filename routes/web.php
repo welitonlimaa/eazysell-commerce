@@ -45,4 +45,6 @@ Route::middleware(['auth', 'role:agent'])->group(function(){
     Route::delete('/category/{id}', [CategoryController::class, 'destroy'])->where('id', '[0-9]+')->name('category.destroy');
     Route::get('/products', [ProductController::class, 'index'])->name('products');
     Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+    Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->where('id', '[0-9]+')->name('products.edit');
+    Route::put('/products/update/{id}', [ProductController::class, 'update'])->where('id', '[0-9]+')->name('products.update');
 });

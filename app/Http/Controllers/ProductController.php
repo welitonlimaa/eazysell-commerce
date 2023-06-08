@@ -20,7 +20,7 @@ class ProductController extends Controller
     {
         $data = $request->validate([
             'name' => 'required',
-            'description',
+            'description' => 'required',
             'price' => 'required|numeric',
             'url_img' => 'required',
             'category_id'  => 'nullable|exists:categories,id',
@@ -31,29 +31,21 @@ class ProductController extends Controller
         return redirect()->route('products')->with('success', 'Product created successfully.');
     }
 
-    // public function edit(Product $product)
-    // {
-    //     return view('products.edit', compact('product'));
-    // }
+    public function edit($id)
+    {
+        $product = Product::findOrFail($id);
+        $categories = Category::all();
 
-    // public function update(Request $request, Product $product)
-    // {
-    //     $data = $request->validate([
-    //         'name' => 'required',
-    //         'description' => 'required',
-    //         'price' => 'required|numeric',
-    //         'url_img' => 'required',
-    //     ]);
+        return view('agent.product-edit', compact('product', 'categories'));
+    }
 
-    //     $product->update($data);
 
-    //     return redirect()->route('products.index')->with('success', 'Product updated successfully.');
-    // }
+    public function update(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+    
+        $product->update($request->all());
 
-    // public function destroy(Product $product)
-    // {
-    //     $product->delete();
-
-    //     return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
-    // }
+        return redirect()->route('products')->with('success', 'Product updated successfully.');
+    }
 }
