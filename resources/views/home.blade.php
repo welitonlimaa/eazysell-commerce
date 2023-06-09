@@ -19,4 +19,12 @@
         @include('components.products-container')
         @include('components.footer')
     </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!sessionStorage.getItem('products') || !sessionStorage.getItem('categories')) {
+                sessionStorage.setItem('products', JSON.stringify(@json($products)));
+                sessionStorage.setItem('categories', JSON.stringify(@json($categories)));
+            }
+        });
+    </script>
 </html>
