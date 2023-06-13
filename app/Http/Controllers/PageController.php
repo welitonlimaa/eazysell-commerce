@@ -15,4 +15,9 @@ class PageController extends Controller
 
         return view('home', ['products'=>$products, 'categories'=>$categories]);
     }
+
+    public function cart()
+    {
+        return view('pages.cart');
+    }
 }

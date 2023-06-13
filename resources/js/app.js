@@ -30,7 +30,7 @@ const products = JSON.parse(sessionStorage.getItem('products'));
 
 const getProductData = (element) => {
   const childrens = element.children;
-
+  console.log(element);
   const data = {};
   for (let i = 0; i < childrens.length; i++) {
     const children = childrens[i];
@@ -56,10 +56,23 @@ const getProductData = (element) => {
 const addToCart = (event) => {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const parent = event.target.parentNode;
-  const product = getProductData(parent);
-  cart.push(product);
+  const str = parent.id;
+  const prefix = 'product_card-';
+  const numberStr = str.slice(prefix.length);
+  const id = parseInt(numberStr);
+  const existingProductIndex = cart.findIndex(item => item.id === id);
+  
+  if (existingProductIndex !== -1) {
+    cart[existingProductIndex].quantity += 1;
+  } else {
+    const product = getProductData(parent);
+    console.log(parent);
+    product.quantity = 1;
+    cart.push(product);
+  }
+  
   localStorage.setItem('cart', JSON.stringify(cart));
-}
+};
 
 const setCategories = (categoriesData) => {
   const categoryCardsContainer = document.getElementById('category-cards');
@@ -98,10 +111,11 @@ const setProducts = (productsData) => {
 
       const button = document.createElement('button');
       button.className = 'flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700';
-      button.innerHTML = '<span class="mx-1">Add to cart</span>';
+      button.textContent = 'Add to cart';
       button.addEventListener('click', addToCart);
 
       const card = document.createElement('div');
+      card.id = `product_card-${product.id}`;
       card.className = 'flex flex-col items-center justify-center w-full max-w-lg mx-auto';
       card.appendChild(img);
       card.appendChild(name);

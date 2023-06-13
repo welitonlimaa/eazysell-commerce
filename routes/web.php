@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('eazysell/cart', [PageController::class, 'cart'])->name('cart');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

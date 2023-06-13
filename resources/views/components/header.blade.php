@@ -1,11 +1,14 @@
 <header>
     <nav class="p-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="https://flowbite.com" class="flex items-center">
+            <a href="{{ route('home') }}" class="flex items-center">
                 <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap">Flowbite</span>
             </a>
             <div class="flex items-center lg:order-2">
+                        <a href="{{ route('cart') }}" class="hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+                            Cart
+                        </a>
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ route(Auth::user()->role . '.dashboard') }}" class="hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">

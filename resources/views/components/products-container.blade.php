@@ -1,5 +1,5 @@
 <!-- component -->
-<section class="bg-white dark:bg-gray-900">
+<main class="">
     <div class="container px-6 py-8 mx-auto">
         <div class="lg:flex lg:-mx-2">
             <div id="category-cards" class="space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4">
@@ -23,4 +23,4 @@
             </div>
         </div>
     </div>
-</section>
+</main>
