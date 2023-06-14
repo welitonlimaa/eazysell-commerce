@@ -22,6 +22,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             const cart = JSON.parse(localStorage.getItem('cart'));
+            // const products = cart.map(({ id, quantity }) => { id, quantity });
             $(function() {
                 $('#checkoutForm').submit(function(event) {
                     event.preventDefault();
