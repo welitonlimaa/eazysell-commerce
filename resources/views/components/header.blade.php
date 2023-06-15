@@ -2,7 +2,7 @@
     <nav class="p-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="{{ route('home') }}" class="flex items-center">
-                <img src="https://github.com/welitonlimaa/eazysell-commerce/blob/main/resources/images/logo.png" alt="Eazysell Logo" class="mr-3 h-6 sm:h-9" />
+                <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/dd5db357-f416-4fa5-b68a-a17f8de2d92f" alt="Eazysell Logo" class="w-40" />
             </a>
             <div class="flex items-center lg:order-2">
                         <a href="{{ route('cart') }}" class="hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
