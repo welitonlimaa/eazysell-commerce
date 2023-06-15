@@ -74,14 +74,40 @@ const addToCart = (event) => {
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
+const clearProductsContainer = () => {
+  const productCardsContainer = document.getElementById('product-cards');
+  productCardsContainer.innerHTML = '';
+}
+
+const getProductsByCategory = ({ target }) => {
+  const category = target.textContent;
+  if (category === "All") {
+    clearProductsContainer();
+    return setProducts(products);
+  }
+  const str = target.id;
+  const prefix = 'btn_category-';
+  const numberStr = str.slice(prefix.length);
+  const id = parseInt(numberStr);
+  
+  const newProducts = products.filter((product) => product.category_id === id);
+  clearProductsContainer();
+  setProducts(newProducts);
+}
+
+const allCategoriessBtn = document.getElementById('all-categories');
+allCategoriessBtn.addEventListener('click', getProductsByCategory);
+
 const setCategories = (categoriesData) => {
   const categoryCardsContainer = document.getElementById('category-cards');
 
   categoriesData.forEach((category) => {
       const categoryBtn = document.createElement('button');
       categoryBtn.type = 'button';
+      categoryBtn.id = `btn_category-${category.id}`;
       categoryBtn.className = 'block font-medium text-gray-500 dark:text-gray-300 hover:underline';
       categoryBtn.textContent = category.name;
+      categoryBtn.addEventListener('click', getProductsByCategory);
       const card = document.createElement('div');
       card.className = 'category-card';
       card.appendChild(categoryBtn);
