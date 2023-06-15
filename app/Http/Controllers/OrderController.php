@@ -21,7 +21,7 @@ class OrderController extends Controller
         $id = Order::create($data)->getKey();   
       
         $productsData = json_decode($request->input('products'), true);
-        $error = '';
+        $status = true;
 
         foreach ($productsData as $product) {
             try {
@@ -31,10 +31,10 @@ class OrderController extends Controller
                     'quantity' => $product['quantity'],
                 ]);
             } catch (Exception $e) {
-                $error =  $e->getMessage();
+                $status =  $e->getMessage();
             }
         }
 
-        return $error;
+        return $status;
     }
 }

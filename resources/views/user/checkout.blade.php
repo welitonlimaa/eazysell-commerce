@@ -28,15 +28,14 @@
                     event.preventDefault();
                     const form = $(this);
                     const url = form.attr('action');
-                    const formData = form.serializeArray(); // Usar serializeArray em vez de serialize
-                    formData.push({ name: 'products', value: JSON.stringify(cart) }); // Adicionar produtos do carrinho como um campo adicional
+                    const formData = form.serializeArray();
+                    formData.push({ name: 'products', value: JSON.stringify(cart) });
                     $.post(url, formData)
                     .done(function(response) {
-                        // Sucesso: fazer algo com a resposta
+                        window.location.href = '/';
                         console.log(response);
                     })
                     .fail(function(xhr, status, error) {
-                        // Erro: lidar com o erro de requisição
                         console.error(error);
                     });
                 });

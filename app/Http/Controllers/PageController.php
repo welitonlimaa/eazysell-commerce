@@ -23,7 +23,8 @@ class PageController extends Controller
     }
 
     public function checkout()
-    {    
-        return view('user.checkout');
+    {   
+        $status = false; 
+        return view('user.checkout', ['status'=>$status]);
     }
 }
