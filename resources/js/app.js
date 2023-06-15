@@ -28,6 +28,16 @@ x.addEventListener('click', () => {
 const categories = JSON.parse(sessionStorage.getItem('categories'));
 const products = JSON.parse(sessionStorage.getItem('products'));
 
+const clearItemsNumber = () => {
+  const tagItemsNumber = document.getElementById('items-number');
+  tagItemsNumber.innerHTML = '';
+};
+
+const setNumberOfItems = (data) => {
+  const tagItemsNumber = document.getElementById('items-number');
+  tagItemsNumber.textContent = `${data.length} Items`;
+};
+
 const getProductData = (element) => {
   const childrens = element.children;
   console.log(element);
@@ -66,7 +76,6 @@ const addToCart = (event) => {
     cart[existingProductIndex].quantity += 1;
   } else {
     const product = getProductData(parent);
-    console.log(parent);
     product.quantity = 1;
     cart.push(product);
   }
@@ -76,13 +85,15 @@ const addToCart = (event) => {
 
 const clearProductsContainer = () => {
   const productCardsContainer = document.getElementById('product-cards');
-  productCardsContainer.innerHTML = '';
+  return productCardsContainer.innerHTML = '';
 }
 
 const getProductsByCategory = ({ target }) => {
   const category = target.textContent;
   if (category === "All") {
     clearProductsContainer();
+    clearItemsNumber();
+    setNumberOfItems(products);
     return setProducts(products);
   }
   const str = target.id;
@@ -91,7 +102,10 @@ const getProductsByCategory = ({ target }) => {
   const id = parseInt(numberStr);
   
   const newProducts = products.filter((product) => product.category_id === id);
+
   clearProductsContainer();
+  clearItemsNumber();
+  setNumberOfItems(newProducts);
   setProducts(newProducts);
 }
 
@@ -153,8 +167,18 @@ const setProducts = (productsData) => {
   }); 
 };
 
+const productsSort = ({ target }) => {
+  if (target.value !== 'price') return
+  products.sort((a, b) =>  a.price - b.price);
+  clearProductsContainer();
+  setProducts(products);
+}
+
+const sortSelect = document.getElementById('options-sort');
+sortSelect.addEventListener('change', productsSort);
 
 document.addEventListener('DOMContentLoaded', function() {
   setCategories(categories);
   setProducts(products);
+  setNumberOfItems(products);
 });
