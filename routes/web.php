@@ -40,6 +40,8 @@ require __DIR__.'/auth.php';
 
 Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/panel/users', [AdminController::class, 'panel_users'])->name('admin.panel.users');
+    Route::delete('/admin/user/destroy/{id}', [AdminController::class, 'destroy'])->where('id', '[0-9]+')->name('admin.user.destroy');
 });
 
 Route::middleware(['auth', 'role:agent'])->group(function(){
