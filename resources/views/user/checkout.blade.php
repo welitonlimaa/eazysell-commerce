@@ -22,7 +22,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             const cart = JSON.parse(localStorage.getItem('cart'));
-            // const products = cart.map(({ id, quantity }) => { id, quantity });
             $(function() {
                 $('#checkoutForm').submit(function(event) {
                     event.preventDefault();
@@ -32,7 +31,7 @@
                     formData.push({ name: 'products', value: JSON.stringify(cart) });
                     $.post(url, formData)
                     .done(function(response) {
-                        window.location.href = '/';
+                        window.location.href = '/dashboard';
                         console.log(response);
                     })
                     .fail(function(xhr, status, error) {
