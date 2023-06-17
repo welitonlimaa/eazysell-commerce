@@ -178,7 +178,9 @@ const sortSelect = document.getElementById('options-sort');
 sortSelect.addEventListener('change', productsSort);
 
 document.addEventListener('DOMContentLoaded', function() {
-  setCategories(categories);
-  setProducts(products);
-  setNumberOfItems(products);
+  const categoriesData = JSON.parse(sessionStorage.getItem('categories'));
+  const productsData = JSON.parse(sessionStorage.getItem('products'));
+  setCategories(categoriesData);
+  setProducts(productsData);
+  setNumberOfItems(productsData);
 });

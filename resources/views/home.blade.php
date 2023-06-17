@@ -13,12 +13,6 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased min-w-full min-h-screen text-gray-900 bg-center bg-gray-100 selection:bg-red-500 selection:text-white">
-        @include('components.header')
-        @include('components.carousel')
-        @include('components.products-container')
-        @include('components.footer')
-    </body>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (!sessionStorage.getItem('products') || !sessionStorage.getItem('categories')) {
@@ -27,4 +21,10 @@
             }
         });
     </script>
+    <body class="antialiased min-w-full min-h-screen text-gray-900 bg-center bg-gray-100 selection:bg-red-500 selection:text-white">
+        @include('components.header')
+        @include('components.carousel')
+        @include('components.products-container')
+        @include('components.footer')
+    </body>
 </html>
