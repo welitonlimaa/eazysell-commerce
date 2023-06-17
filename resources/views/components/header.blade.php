@@ -1,4 +1,4 @@
-<header>
+<header class="bg-gray-100">
     <nav class="p-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="{{ route('home') }}" class="flex items-center">
@@ -34,7 +34,7 @@
             <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="nav-links">
                 <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 rounded lg:p-0" aria-current="page">Home</a>
+                        <a href="{{ route('home') }}" class="block py-2 pr-4 pl-3 rounded lg:p-0" aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="#" class="block py-2 pr-4 pl-3 border-b lg:border-0 lg:p-0">Company</a>

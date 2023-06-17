@@ -1,5 +1,5 @@
 <!-- component -->
-<footer class="bg-gradient-to-r from-orange-300 via-[#eb720f] to-orange-300">
+<footer class="w-full mt-6 bg-gradient-to-r from-orange-400 via-[#eb720f] to-orange-400">
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
