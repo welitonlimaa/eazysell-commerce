@@ -3,7 +3,7 @@
 @section('title', 'Cart')
 
 @section('content')
-  <div class="h-screen bg-gray-100 pt-20">
+  <div class="h-fit bg-gray-100 pt-20">
     <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <div id="products_cart-container" class="rounded-lg md:w-2/3">
@@ -24,7 +24,9 @@
             <p id="final-price" class="mb-1 text-lg font-bold"></p>
           </div>
         </div>
-        <a href="{{ route('checkout') }}" class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</a>
+        <div class="flex justify-between mt-2">
+        <a href="{{ route('checkout') }}" class="w-fit m-auto rounded-md bg-blue-500 p-2 font-medium text-blue-50 hover:bg-blue-600">Check out</a>
+        </div>
       </div>
     </div>
   </div>

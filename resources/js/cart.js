@@ -55,7 +55,7 @@ const productCardToCart = (product) => {
   const image = document.createElement('img');
   image.src = product.image;
   image.alt = 'product-image';
-  image.className = 'w-full rounded-lg sm:w-40';
+  image.className = 'w-20 rounded-lg sm:w-40';
   card.appendChild(image);
 
   const contentContainer = document.createElement('div');
@@ -85,7 +85,7 @@ const productCardToCart = (product) => {
   contentRight.appendChild(quantityContainer);
 
   const minusButton = document.createElement('span');
-  minusButton.className = 'cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50';
+  minusButton.className = 'cursor-pointer w-8 rounded-l bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50';
   minusButton.textContent = '-';
   minusButton.addEventListener('click', decrementQuantity);
   quantityContainer.appendChild(minusButton);
@@ -97,7 +97,7 @@ const productCardToCart = (product) => {
   quantityContainer.appendChild(quantityInput);
 
   const plusButton = document.createElement('span');
-  plusButton.className = 'cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50';
+  plusButton.className = 'cursor-pointer w-8 rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50';
   plusButton.textContent = '+';
   plusButton.addEventListener('click', incrementQuantity);
   quantityContainer.appendChild(plusButton);
