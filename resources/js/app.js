@@ -150,7 +150,7 @@ const setProducts = (productsData) => {
       price.textContent = '$ ' + product.price;
 
       const button = document.createElement('button');
-      button.className = 'flex items-center justify-center w-full px-2 py-2 mt-4 font-semibold tracking-wide text-white capitalize transition-colors duration-200 transform bg-orange-500 rounded-md hover:bg-orange-600 focus:outline-none focus:bg-gray-700';
+      button.className = 'flex items-center justify-center w-full px-2 py-2 mt-4 font-semibold tracking-wide text-white capitalize transition-colors duration-200 transform bg-orange-500 rounded-md hover:bg-orange-600 focus:outline-none focus:bg-orange-600';
       button.textContent = 'Add to cart';
       button.addEventListener('click', addToCart);
 
