@@ -1,8 +1,8 @@
 <header class="bg-gray-100">
     <nav class="p-4">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div class="flex flex-wrap justify-between items-center sm:w-full mx-auto max-w-screen-xl">
             <a href="{{ route('home') }}" class="flex items-center">
-                <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/dd5db357-f416-4fa5-b68a-a17f8de2d92f" alt="Eazysell Logo" class="w-40" />
+                <img class="lg:w-40 sm:w-4/5 sm:m-auto" src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/dd5db357-f416-4fa5-b68a-a17f8de2d92f" alt="Eazysell Logo" />
             </a>
             <div class="flex items-center lg:order-2">
                         <a href="{{ route('cart') }}" class="text-center hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 rounded-lg text-sm font-bold px-4 lg:px-5 py-2 lg:py-2.5 mr-2">

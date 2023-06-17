@@ -142,7 +142,7 @@ const setProducts = (productsData) => {
       img.alt = product.name;
 
       const name = document.createElement('h4');
-      name.className = 'product-title mt-2 text-lg font-medium text-gray-700 dark:text-gray-200';
+      name.className = 'product-title h-10 my-2 text-lg font-medium text-gray-700 dark:text-gray-200';
       name.textContent = product.name;
 
       const price = document.createElement('p');

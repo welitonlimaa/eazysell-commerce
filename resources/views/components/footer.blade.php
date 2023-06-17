@@ -5,7 +5,7 @@
       <div>
       <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/dd5db357-f416-4fa5-b68a-a17f8de2d92f" class="mr-5 h-6 sm:h-9" alt="logo" />
         <p class="max-w-xs mt-4 text-sm text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+          Find the best deals and discounts here.
         </p>
         <div class="flex mt-8 space-x-6 text-white">
           <a class="hover:opacity-75" href target="_blank" rel="noreferrer">

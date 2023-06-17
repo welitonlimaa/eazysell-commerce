@@ -2,10 +2,10 @@
 	<div id="default-carousel" class="relative" data-carousel="static">
         <div class="overflow-hidden relative h-56 sm:h-64 xl:h-80 2xl:h-96">
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/4dd6bdf6-b191-4e23-a5b0-ed4f060a27b6" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/3d903b9d-045f-4a5b-908f-35aabcc38554" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
             </div>
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/31a1e61f-8cd7-4016-9696-311b8a5a853a" class="block absolute object-none object-top top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                <img src="https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/24cde249-017d-4f0a-80f2-bc10f4c1183a" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
             </div>
         </div>
         <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">

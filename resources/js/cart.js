@@ -1,3 +1,21 @@
+// ham menu
+
+const ham = document.getElementById('ham-svg');
+const x = document.getElementById('x-svg');
+const navLinks = document.getElementById('nav-links');
+
+ham.addEventListener('click', () => {
+  ham.classList.add('hidden');
+  x.classList.remove('hidden');
+  navLinks.classList.remove('hidden');
+});
+
+x.addEventListener('click', () => {
+  ham.classList.remove('hidden');
+  x.classList.add('hidden');
+  navLinks.classList.add('hidden');
+});
+
 const getId = (target) => {
   const parent = target.parentNode;
   const str = parent.id;

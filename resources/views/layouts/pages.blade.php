@@ -22,7 +22,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/cart.js'])
     </head>
-    <body class="antialiased min-w-full min-h-screen text-gray-900 bg-center bg-gray-100 selection:bg-red-500 selection:text-white">
+    <body class="antialiased min-w-full min-h-screen text-gray-900 bg-center bg-white selection:bg-red-500 selection:text-white">
         @include('components.header')
         <main class="container px-6 py-8 mx-auto">
             @yield('content')
