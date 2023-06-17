@@ -7,11 +7,14 @@ EazySell Commerce é um projeto de e-commerce desenvolvido com Laravel, JavaScri
 - Cadastro de usuários
 - Autenticação e autorização de usuários
 - Listagem de produtos
+- Filtragem de produtos por categoria
+- Ordenação de produtos por preço
 - Adição de produtos ao carrinho
 - Remoção de produtos do carrinho
 - Finalização do pedido no checkout
 - Painel de controle para administradores
 - Painel de controle para agentes
+- Cadastramento de novos produtos
 
 ## Screenshots
 ### Home
