@@ -17,6 +17,12 @@ EazySell Commerce é um projeto de e-commerce desenvolvido com Laravel, JavaScri
 - Cadastramento de novos produtos
 
 ## Screenshots
+
+### Fluxo Cliente
+
+
+![gif](https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/9d1fe38b-8d5b-4713-910d-1eab66312a7a)
+
 ### Home
 ![home](https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/c1dd742c-a416-451b-8907-b9d16787430a)
 
