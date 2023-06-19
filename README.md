@@ -26,6 +26,17 @@ EazySell Commerce é um projeto de e-commerce desenvolvido com Laravel, JavaScri
 ### Orders
 ![orders](https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/b665da4f-33d0-4333-a425-60cc7ba7c558)
 
+## Banco de Dados
+![db](https://github.com/welitonlimaa/eazysell-commerce/assets/108986668/5a11dcf8-b189-4820-ac93-df8475b74316)
+
+## Tecnologias Utilizadas
+
+* Laravel
+* PHP 8
+* MySQL
+* JavaScript
+* Tailwind CSS
+
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes dependências instaladas em seu ambiente de desenvolvimento:
